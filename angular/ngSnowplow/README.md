@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
 
+## Requirements
+
+Assuming [NodeJS and NPM](https://nodejs.org/en/) are installed.
+
+Install Angular CLI globally:
+
+```
+npm install -g @angular/cli
+```
+
 ## Add your collector URL
 
 Navigate to `src/app/snowplow.service.ts` and add your collector url to the call to `newTracker`.
