@@ -47,7 +47,7 @@ Two examples of tracking are in this repository:
 
 Accessing the Snowplow JavaScript Tracker is done with the following lines:
 
-```dart
+```Dart
 @JS()
 library snowplow;
 
@@ -59,8 +59,15 @@ external void snowplow(String method);
 
 and can then be used:
 
-```dart
+```Dart
 snowplow('trackPageView');
+```
+
+if you wish to call more complex Snowplow tracking methods you will need to extend your external snowplow definition:
+
+```Dart
+@JS('window.snowplow')
+external void snowplow(String method, [dynamic arg1, dynamic arg2, dynamic arg3, dynamic arg4, dynamic arg5, dynamic arg6]);
 ```
 
 [install]: https://flutter.dev/docs/get-started/install
