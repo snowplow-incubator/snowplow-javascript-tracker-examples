@@ -32,15 +32,16 @@ Flutter Web support is available as a technical preview and is only available in
 
 ### Example Snowplow JS Tracker usage
 
-The Snowplow JavaScript Tracker can be loaded in the index.html and then accessed via a Dart external.
+The Snowplow JavaScript Tracker can be loaded in the index.html and then accessed via a Dart external.  
 You must include [sp.js](https://github.com/snowplow/snowplow-javascript-tracker/releases/) as an asset in your web build.
 
-See: [web/index.html](web/index.html)
+See: [web/index.html](web/index.html)  
 You will want to point Line 10 to your own Snowplow Collector.
 
 Two examples of tracking are in this repository:
-A Page View on initial load: [lib/src/puzzle_home_state.dart](lib/src/puzzle_home_state.dart)
-Tracking events as users click on tiles: [lib/src/core/puzzle_animator.dart](lib/src/core/puzzle_animator.dart)
+
+- A Page View on initial load: [lib/src/puzzle_home_state.dart](lib/src/puzzle_home_state.dart)
+- Tracking events as users click on tiles: [lib/src/core/puzzle_animator.dart](lib/src/core/puzzle_animator.dart)
 
 ### Code Snippets
 
