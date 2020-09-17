@@ -4,7 +4,7 @@ A slide (15) puzzle implemented in Dart and Flutter, based on [flutter.github.io
 
 ## Setup
 
-Requires [flutter][web] to be installed.
+Requires [flutter][install] to be installed and available on PATH (as per the flutter installation instructions).
 
 ### Building sample
 
@@ -62,5 +62,5 @@ and can then be used:
 snowplow('trackPageView');
 ```
 
-[web]: https://flutter.dev/web
+[install]: https://flutter.dev/docs/get-started/install
 [samples]: https://flutter.github.io/samples/
