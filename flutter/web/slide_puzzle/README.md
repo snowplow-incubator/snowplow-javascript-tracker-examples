@@ -1,8 +1,6 @@
 # Flutter web example
 
-A slide (15) puzzle implemented in Dart and Flutter, based on [flutter.github.io/samples][samples]
-
-![GitHub Logo](docs/screen_shot.png)
+A slide (15) puzzle implemented in Dart and Flutter, based on [flutter.github.io/samples][samples].
 
 ## Setup
 
