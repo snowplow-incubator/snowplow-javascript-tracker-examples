@@ -1,6 +1,30 @@
 import './App.css';
 import { Link } from "react-router-dom";
 import { useLocationChange } from './tracker';
+import { enableAnonymousTracking, disableAnonymousTracking, trackStructEvent } from '@snowplow/browser-tracker';
+
+function handleEnableAnonymousTracking() {
+  enableAnonymousTracking({
+    options: { withServerAnonymisation: true },
+  });
+}
+
+function handleEnableAnonymousTrackingWithSessionTracking() {
+  enableAnonymousTracking({
+    options: { withSessionTracking: true },
+  });
+}
+
+function handleDisableAnonymousTracking() {
+  disableAnonymousTracking();
+}
+
+function handleTrackStructuredEvent() {
+  trackStructEvent({
+    category: "category",
+    action: "action"
+  });
+}
 
 function App() {
   useLocationChange();
@@ -13,6 +37,18 @@ function App() {
         <dt><Link to="/form">Form tracking demo</Link></dt>
         <dt><Link to="/iframe_form">Form tracking demo in iframe</Link></dt>
       </dl>
+
+      <p>
+        <button onClick={handleEnableAnonymousTracking}>Enable anonymous tracking</button>
+        &nbsp;
+        <button onClick={handleEnableAnonymousTrackingWithSessionTracking}>Enable anonymous tracking with session tracking</button>
+        &nbsp;
+        <button onClick={handleDisableAnonymousTracking}>Disable anonymous tracking</button>
+      </p>
+
+      <p>
+        <button onClick={handleTrackStructuredEvent}>Track a structured event</button>
+      </p>
     </div>
   );
 }
