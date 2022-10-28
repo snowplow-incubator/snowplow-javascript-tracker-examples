@@ -1,12 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 import Snowplow from "./routes/snowplow";
-import Form from './routes/form';
-import IframeForm from './routes/iframeForm';
+import Form from "./routes/form";
+import IframeForm from "./routes/iframeForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Youtube from "./routes/youtube";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,10 +17,11 @@ ReactDOM.render(
         <Route path="snowplow" element={<Snowplow />} />
         <Route path="form" element={<Form />} />
         <Route path="iframe_form" element={<IframeForm />} />
+        <Route path="youtube" element={<Youtube />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
