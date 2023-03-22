@@ -36,7 +36,8 @@ function App() {
         <dt><Link to="/snowplow">About Snowplow</Link></dt>
         <dt><Link to="/form">Form tracking demo</Link></dt>
         <dt><Link to="/iframe_form">Form tracking demo in iframe</Link></dt>
-        <dt><Link to="/youtube">Youtube video tracking</Link></dt>
+        <dt><Link to="/youtube">Youtube video tracking from Iframe</Link></dt>
+        <dt><Link to="/youtube_player">Youtube video tracking with YouTube Iframe API Player</Link></dt>
       </dl>
 
       <p>

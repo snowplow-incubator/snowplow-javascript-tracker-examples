@@ -1543,47 +1543,47 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snowplow/browser-plugin-form-tracking@^3.6.0":
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-form-tracking/-/browser-plugin-form-tracking-3.6.0.tgz#542cdf6babe6eea09239392de404c2bc091a095a"
-  integrity sha512-kSRz1RCJJPfrzElM/erXB6qCroIqtdolt3L9sL1K2mQZV3iHeMeZWUlzg9bGgTZYgBpFlFpCH/rdCJNc/U0TyQ==
+"@snowplow/browser-plugin-form-tracking@^3.9.0":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-form-tracking/-/browser-plugin-form-tracking-3.9.0.tgz#926109e34824238555fce80288cd28bb6f38688b"
+  integrity sha512-VLtMR7xBQNhktl2NaRV8OWcFCbhdn9ZsrFlnKEFdTISzmfHGRxDIlQE88opwI480VFBcDpTx8d80mcyxFiG2oA==
   dependencies:
-    "@snowplow/browser-tracker-core" "3.6.0"
-    "@snowplow/tracker-core" "3.6.0"
+    "@snowplow/browser-tracker-core" "3.9.0"
+    "@snowplow/tracker-core" "3.9.0"
     tslib "^2.3.1"
 
-"@snowplow/browser-plugin-youtube-tracking@^3.6.0":
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-youtube-tracking/-/browser-plugin-youtube-tracking-3.6.0.tgz#619f2f0581fbfe898c618a3da434411482d90e2d"
-  integrity sha512-blxVBiMo9n6U8ASgssHMsaGF5aLpTM/J+AktcYs9c597RyNiI1cC+8sjX4G5vmrrRGMFLj8SmgrP46vmYwPVsw==
+"@snowplow/browser-plugin-youtube-tracking@^3.9.0":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-youtube-tracking/-/browser-plugin-youtube-tracking-3.9.0.tgz#b27032d5819a1bac08691bfcf78e0612e2611bda"
+  integrity sha512-UKlQOyjck7ZYhzw+gd6qGUMwcnttcPcGlwoZp6kZY/7HJD1jOPO8aIVp6b9rhCzSpFlX8Jh0U3eiWMGbaJ/tbw==
   dependencies:
-    "@snowplow/browser-tracker-core" "3.6.0"
-    "@snowplow/tracker-core" "3.6.0"
+    "@snowplow/browser-tracker-core" "3.9.0"
+    "@snowplow/tracker-core" "3.9.0"
     tslib "^2.3.1"
 
-"@snowplow/browser-tracker-core@3.6.0":
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker-core/-/browser-tracker-core-3.6.0.tgz#bb10da144d6c5905ae5e89e635ba63df6ade397b"
-  integrity sha512-qvc/H+9ZxdJp4Z3GbC3iR/DwR7e4kNrM6nV423/wR+B1wyzbBAzsboiW30g7NfSRcCpurxSLOxiv0YDm5b691g==
+"@snowplow/browser-tracker-core@3.9.0":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker-core/-/browser-tracker-core-3.9.0.tgz#7489cfedc334506cbea24891de07b4880897e372"
+  integrity sha512-jLije/t8Ce4g85bFLDOyjF8GJ5n1DdP0pAoe8X0I4y3ke2jcegvNmM/xPQeePKFN7Pp30+6NZWUPzsC01DjyWw==
   dependencies:
-    "@snowplow/tracker-core" "3.6.0"
+    "@snowplow/tracker-core" "3.9.0"
     sha1 "^1.1.1"
     tslib "^2.3.1"
     uuid "^3.4.0"
 
-"@snowplow/browser-tracker@^3.6.0":
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker/-/browser-tracker-3.6.0.tgz#a99862919f768151b4265dfe7209075c32f1a1d6"
-  integrity sha512-9o3vxCrsi6UU+bxA76T/VRa8t5ojvTqvle1igWBds9e038nvI73rOjgx1TRdKk3Bn++ICvfj9M+jW2uyRwyYmQ==
+"@snowplow/browser-tracker@^3.9.0":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker/-/browser-tracker-3.9.0.tgz#4ce6015cd83b3fe7c0d9993f3d0b994b3b47781e"
+  integrity sha512-rP+/duNSRg26rrgmDWRECzPR4sMfo9N4OQnYb3mphAgPtuOdcKU3E41Aj3qN+fzfa/DSjFZEQmSqD6xN55VR8A==
   dependencies:
-    "@snowplow/browser-tracker-core" "3.6.0"
-    "@snowplow/tracker-core" "3.6.0"
+    "@snowplow/browser-tracker-core" "3.9.0"
+    "@snowplow/tracker-core" "3.9.0"
     tslib "^2.3.1"
 
-"@snowplow/tracker-core@3.6.0":
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/tracker-core/-/tracker-core-3.6.0.tgz#e8933a91255dbfbe5d8096759973578ab1d85d23"
-  integrity sha512-KXncnc4xJvqvVZdZenHbthyWM3uUovrFBhpQ4NPp+eY3MvBa4KZvtnEr8LOV60XlfrDWCbhZi71kaJrGFOrUug==
+"@snowplow/tracker-core@3.9.0":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/tracker-core/-/tracker-core-3.9.0.tgz#f59e3ab90003abb77b592e9e554be9ab9e121857"
+  integrity sha512-6JcroVk5r2i3r4QQPQ1zd7zhixP6/fSupkjV0AeSNvLbbVv/k4UxeoM2m57zJdsaBaGZDEKJqgmYTRkHJUGFKg==
   dependencies:
     tslib "^2.3.1"
     uuid "^3.4.0"

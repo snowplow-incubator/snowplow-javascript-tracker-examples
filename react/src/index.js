@@ -8,6 +8,7 @@ import Form from "./routes/form";
 import IframeForm from "./routes/iframeForm";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Youtube from "./routes/youtube";
+import YoutubePlayer from "./routes/youtubePlayer.jsx";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route path="form" element={<Form />} />
         <Route path="iframe_form" element={<IframeForm />} />
         <Route path="youtube" element={<Youtube />} />
+        <Route path="youtube_player" element={<YoutubePlayer />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
