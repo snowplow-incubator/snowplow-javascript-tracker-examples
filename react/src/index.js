@@ -10,17 +10,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Youtube from "./routes/youtube";
 import YoutubePlayer from "./routes/youtubePlayer.jsx";
 import { getPath } from "./helpers";
+import Media from "./routes/media.jsx";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path={getPath('')} element={<App />} />
+        <Route path={getPath("")} element={<App />} />
         <Route path={getPath("snowplow")} element={<Snowplow />} />
         <Route path={getPath("form")} element={<Form />} />
         <Route path={getPath("iframe_form")} element={<IframeForm />} />
         <Route path={getPath("youtube")} element={<Youtube />} />
         <Route path={getPath("youtube_player")} element={<YoutubePlayer />} />
+        <Route path={getPath("media")} element={<Media />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

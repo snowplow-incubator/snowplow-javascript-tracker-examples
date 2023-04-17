@@ -40,6 +40,7 @@ function App() {
         <dt><Link to={getPath("iframe_form")}>Form tracking demo in iframe</Link></dt>
         <dt><Link to={getPath("youtube")}>Youtube video tracking from Iframe</Link></dt>
         <dt><Link to={getPath("youtube_player")}>Youtube video tracking with YouTube Iframe API Player</Link></dt>
+        <dt><Link to={getPath("media")}>Custom media tracking demo</Link></dt>
       </dl>
 
       <p>

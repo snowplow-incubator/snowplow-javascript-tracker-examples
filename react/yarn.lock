@@ -1552,6 +1552,10 @@
     "@snowplow/tracker-core" "3.9.0"
     tslib "^2.3.1"
 
+"@snowplow/browser-plugin-media@link:../../snowplow-javascript-tracker/plugins/browser-plugin-media":
+  version "0.0.0"
+  uid ""
+
 "@snowplow/browser-plugin-youtube-tracking@^3.9.0":
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-youtube-tracking/-/browser-plugin-youtube-tracking-3.9.0.tgz#b27032d5819a1bac08691bfcf78e0612e2611bda"
@@ -1561,7 +1565,7 @@
     "@snowplow/tracker-core" "3.9.0"
     tslib "^2.3.1"
 
-"@snowplow/browser-tracker-core@3.9.0":
+"@snowplow/browser-tracker-core@3.9.0", "@snowplow/browser-tracker-core@workspace:*":
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker-core/-/browser-tracker-core-3.9.0.tgz#7489cfedc334506cbea24891de07b4880897e372"
   integrity sha512-jLije/t8Ce4g85bFLDOyjF8GJ5n1DdP0pAoe8X0I4y3ke2jcegvNmM/xPQeePKFN7Pp30+6NZWUPzsC01DjyWw==
@@ -1580,7 +1584,7 @@
     "@snowplow/tracker-core" "3.9.0"
     tslib "^2.3.1"
 
-"@snowplow/tracker-core@3.9.0":
+"@snowplow/tracker-core@3.9.0", "@snowplow/tracker-core@workspace:*":
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/@snowplow/tracker-core/-/tracker-core-3.9.0.tgz#f59e3ab90003abb77b592e9e554be9ab9e121857"
   integrity sha512-6JcroVk5r2i3r4QQPQ1zd7zhixP6/fSupkjV0AeSNvLbbVv/k4UxeoM2m57zJdsaBaGZDEKJqgmYTRkHJUGFKg==
