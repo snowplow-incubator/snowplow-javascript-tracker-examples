@@ -2,6 +2,8 @@ import './App.css';
 import { Link } from "react-router-dom";
 import { useLocationChange } from './tracker';
 import { enableAnonymousTracking, disableAnonymousTracking, trackStructEvent } from '@snowplow/browser-tracker';
+import CreateTrackerWrapper from "./createTrackerWrapper";
+import { getPath } from './helpers';
 
 function handleEnableAnonymousTracking() {
   enableAnonymousTracking({
@@ -33,11 +35,11 @@ function App() {
     <div className="App">
       <h1>Welcome!</h1>
       <dl>
-        <dt><Link to="/snowplow">About Snowplow</Link></dt>
-        <dt><Link to="/form">Form tracking demo</Link></dt>
-        <dt><Link to="/iframe_form">Form tracking demo in iframe</Link></dt>
-        <dt><Link to="/youtube">Youtube video tracking from Iframe</Link></dt>
-        <dt><Link to="/youtube_player">Youtube video tracking with YouTube Iframe API Player</Link></dt>
+        <dt><Link to={getPath("snowplow")}>About Snowplow</Link></dt>
+        <dt><Link to={getPath("form")}>Form tracking demo</Link></dt>
+        <dt><Link to={getPath("iframe_form")}>Form tracking demo in iframe</Link></dt>
+        <dt><Link to={getPath("youtube")}>Youtube video tracking from Iframe</Link></dt>
+        <dt><Link to={getPath("youtube_player")}>Youtube video tracking with YouTube Iframe API Player</Link></dt>
       </dl>
 
       <p>
@@ -55,4 +57,12 @@ function App() {
   );
 }
 
-export default App;
+function Wrapped() {
+  return (
+    <CreateTrackerWrapper>
+      <App />
+    </CreateTrackerWrapper>
+  );
+}
+
+export default Wrapped;

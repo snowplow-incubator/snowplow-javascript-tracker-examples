@@ -2,8 +2,10 @@ import { useLocationChange } from '../tracker';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { enableFormTracking } from '@snowplow/browser-plugin-form-tracking';
+import CreateTrackerWrapper from "../createTrackerWrapper";
+import { getPath } from '../helpers';
 
-export default function Form() {
+function Form() {
     useLocationChange();
     useEffect(() => {
         enableFormTracking({
@@ -19,7 +21,7 @@ export default function Form() {
             <h1>Form tracking demo</h1>
 
             <p>
-                <Link to="/">Go back</Link>
+                <Link to={getPath("")}>Go back</Link>
             </p>
 
             <form id="myForm" className="formy-mcformface" onSubmit={() => alert('Submitted')}>
@@ -58,3 +60,13 @@ export default function Form() {
         </div>
     );
 }
+
+function Wrapped() {
+  return (
+    <CreateTrackerWrapper>
+      <Form />
+    </CreateTrackerWrapper>
+  );
+}
+
+export default Wrapped;
