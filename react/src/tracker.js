@@ -8,30 +8,17 @@ import { useLocation } from "react-router-dom";
 import { FormTrackingPlugin } from "@snowplow/browser-plugin-form-tracking";
 import { YouTubeTrackingPlugin } from "@snowplow/browser-plugin-youtube-tracking";
 import { SnowplowMediaPlugin } from "@snowplow/browser-plugin-media";
+import CaptureTrackedEventsPlugin from "./plugins/captureTrackedEventsPlugin";
 
 var tracker;
 
 const initializeTracker = (endpoint) => {
-  tracker = newTracker("ns1", "http://localhost:9090", {
+  tracker = newTracker("ns1", endpoint, {
     plugins: [
       FormTrackingPlugin(),
       YouTubeTrackingPlugin(),
       SnowplowMediaPlugin(),
-      {
-        afterTrack: (payload) => {
-          console.log(payload);
-          if (payload.ue_px && payload.cx) {
-            let event = JSON.parse(atob(payload.ue_px));
-            let context = JSON.parse(atob(payload.cx));
-
-            window.dispatchEvent(
-              new CustomEvent("spEvent", {
-                detail: { id: payload.eid, event: event, context: context },
-              })
-            );
-          }
-        },
-      },
+      CaptureTrackedEventsPlugin(),
     ],
   });
 
