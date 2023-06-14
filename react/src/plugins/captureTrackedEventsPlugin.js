@@ -12,6 +12,11 @@ function afterTrack(payload) {
   }
 }
 
+/**
+ * A tracker plugin that captures tracked events and dispatches them to the window.
+ * This is used internally in the app to display the tracked events in the UI.
+ * @returns {object} Plugin object.
+ */
 export default function CaptureTrackedEventsPlugin() {
   return {
     afterTrack,
