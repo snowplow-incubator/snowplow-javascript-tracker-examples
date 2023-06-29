@@ -1,28 +1,29 @@
 import { useState, useEffect } from "react";
 import "./table.css";
+import { mediaSchemas } from "../constants";
 
 let allEvents = [];
 
-const handleEvent = (e) => {
-  const id = e.detail.id;
-  const event = e.detail.event;
-  const context = e.detail.context;
+const createEventHandler = (schemas) => {
+  return (e) => {
+    const { id, event, context } = e.detail;
 
-  if (
-    event.data.schema.includes("iglu:com.snowplowanalytics.snowplow.media/")
-  ) {
-    allEvents.push({
-      id: id,
-      event: event.data,
-      context: context.data,
-    });
-  }
+    if (schemas.some((s) => event.data.schema.includes(s))) {
+      allEvents.push({
+        id: id,
+        event: event.data,
+        context: context.data,
+      });
+    }
+  };
 };
 
-window.addEventListener("spEvent", handleEvent);
-
-function MediaEvents() {
+function MediaEvents({ schemas = mediaSchemas }) {
   const [eventList, setEventList] = useState([]);
+
+  useEffect(() => {
+    window.addEventListener("spEvent", createEventHandler(schemas));
+  }, [schemas]);
 
   useEffect(() => {
     let interval = setInterval(() => setEventList([...allEvents]), 1000);
@@ -96,21 +97,22 @@ function MediaEvents() {
 }
 
 function EventRow({ event, context }) {
-  let mediaPlayer = context.find((e) =>
-    e.schema.includes("/player/")
-  );
-  let session = context.find((e) =>
-    e.schema.includes("/session/")
-  );
-  let adBreak = context.find((e) =>
-    e.schema.includes("/ad_break/")
-  );
+  let mediaPlayer = context.find((e) => e.schema.includes("/media_player/"));
+  let session = context.find((e) => e.schema.includes("/session/"));
+  let adBreak = context.find((e) => e.schema.includes("/ad_break/"));
   let ad = context.find((e) => e.schema.includes("/ad/"));
 
   return (
     <tr>
       <th>{event.schema.split("/")[1]}</th>
-      <td>{Object.keys(event.data).map((key) => (<>{key}: {event.data[key]}<br/></>))}</td>
+      <td>
+        {Object.keys(event.data).map((key) => (
+          <>
+            {key}: {JSON.stringify(event.data[key])}
+            <br />
+          </>
+        ))}
+      </td>
 
       <td>{mediaPlayer.data.label}</td>
       <td>{mediaPlayer.data.mediaType}</td>

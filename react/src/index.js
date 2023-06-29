@@ -11,6 +11,8 @@ import Youtube from "./routes/youtube";
 import YoutubePlayer from "./routes/youtubePlayer.jsx";
 import { getPath } from "./helpers";
 import Media from "./routes/media.jsx";
+import VimeoIframe from "./routes/vimeoIframe";
+import VimeoPlayer from "./routes/vimeoPlayer";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,6 +25,8 @@ ReactDOM.render(
         <Route path={getPath("youtube")} element={<Youtube />} />
         <Route path={getPath("youtube_player")} element={<YoutubePlayer />} />
         <Route path={getPath("media")} element={<Media />} />
+        <Route path={getPath("vimeo_iframe")} element={<VimeoIframe />} />
+        <Route path={getPath("vimeo_player")} element={<VimeoPlayer />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
