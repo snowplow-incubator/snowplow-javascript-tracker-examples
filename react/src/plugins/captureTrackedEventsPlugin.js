@@ -1,8 +1,10 @@
+import { decode } from "js-base64";
+
 function afterTrack(payload) {
   console.log(payload);
   if (payload.ue_px && payload.cx) {
-    let event = JSON.parse(atob(payload.ue_px));
-    let context = JSON.parse(atob(payload.cx));
+    let event = JSON.parse(decode(payload.ue_px));
+    let context = JSON.parse(decode(payload.cx));
 
     window.dispatchEvent(
       new CustomEvent("spEvent", {

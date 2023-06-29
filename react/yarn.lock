@@ -1543,57 +1543,68 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snowplow/browser-plugin-form-tracking@^3.12.0":
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-form-tracking/-/browser-plugin-form-tracking-3.12.0.tgz#1a3c4a40fb4e92d2c23a8417a1aa66abbf5731cd"
-  integrity sha512-38L29wi7X4+jMD6zu7ajbpnPxUgXvc0AddfBq5Jv0R0MwIIOhAh6kDZe4NM+EWMNsphoWt8zHX2hb6QyM3Sozw==
+"@snowplow/browser-plugin-form-tracking@^3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-form-tracking/-/browser-plugin-form-tracking-3.14.0.tgz#49b16b01521801a1a85969eef5b39c1c383f3ef4"
+  integrity sha512-MJZeIbdqm84wiqDOQi6sVtuOoygDZrbr5862SMOl4sCjmG0ZfVw3WF2GtCla3onnmPkOnfqbevEwW36RYZsO7w==
   dependencies:
-    "@snowplow/browser-tracker-core" "3.12.0"
-    "@snowplow/tracker-core" "3.12.0"
+    "@snowplow/browser-tracker-core" "3.14.0"
+    "@snowplow/tracker-core" "3.14.0"
     tslib "^2.3.1"
 
-"@snowplow/browser-plugin-media@^3.12.0":
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-media/-/browser-plugin-media-3.12.0.tgz#82ab638a538c360730fe755cf6f4a905417f6b7b"
-  integrity sha512-QkcrteIcOhLRPqqX8MFMysEgvX1GEN9eWkoU2K4cL6zWuTnPe+H91Dc6ABbR8EohJB0nvOqA8cLHM4mXeSXxUA==
+"@snowplow/browser-plugin-media@3.14.0", "@snowplow/browser-plugin-media@^3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-media/-/browser-plugin-media-3.14.0.tgz#46bc173f3f0f534c99993394216ab10ae4c8c4f6"
+  integrity sha512-/FI7J1/E/TN9HE2bbsMEiEqKyz44Mp0Y+9wVsPcvsbCaWomt/EZro+bvV8O4sBIRh2nOqmsFhrEe5EDGNB4A/g==
   dependencies:
-    "@snowplow/browser-tracker-core" "3.12.0"
-    "@snowplow/tracker-core" "3.12.0"
+    "@snowplow/browser-tracker-core" "3.14.0"
+    "@snowplow/tracker-core" "3.14.0"
     tslib "^2.3.1"
     uuid "^3.4.0"
 
-"@snowplow/browser-plugin-youtube-tracking@^3.12.0":
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-youtube-tracking/-/browser-plugin-youtube-tracking-3.12.0.tgz#e1bfef712d6cbae74f73d7cc6daf5448d99fccb2"
-  integrity sha512-G2IPIA/fF5T+RxzEsJZEALYbzfzSyeNTFHVuPVO69l4irEGGDeVqMMx9Na6TT2ZzN6y0yKVjBWo02iUz9SnYpA==
+"@snowplow/browser-plugin-vimeo-tracking@3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-vimeo-tracking/-/browser-plugin-vimeo-tracking-3.14.0.tgz#0bd92991abdbe91d7544a0ccaf82a71779762bd3"
+  integrity sha512-yrru3voAguGbEA/SBJTuFMSNOYrMMvg9+9eCcNXUlwElp2wRHRcfsq6bupbneJir5M0QS3/TTgHIJsGXTHUZmg==
   dependencies:
-    "@snowplow/browser-tracker-core" "3.12.0"
-    "@snowplow/tracker-core" "3.12.0"
+    "@snowplow/browser-plugin-media" "3.14.0"
+    "@snowplow/browser-tracker-core" "3.14.0"
+    "@snowplow/tracker-core" "3.14.0"
+    "@vimeo/player" "2.16.4"
     tslib "^2.3.1"
 
-"@snowplow/browser-tracker-core@3.12.0":
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker-core/-/browser-tracker-core-3.12.0.tgz#eb9bce60c6ecd2c51530fda1c893f75a09048e3b"
-  integrity sha512-niMi23izU6irxeld9RL4LkFGwDRQ79vpV3cBcN8ip7X43/a7FS7PVmyP5r8Er1jhaYvMWah3bs8ltURJrvbSGw==
+"@snowplow/browser-plugin-youtube-tracking@^3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-youtube-tracking/-/browser-plugin-youtube-tracking-3.14.0.tgz#1bb69f4670352d2a370396a53eb8324979ec3e0f"
+  integrity sha512-t2jSNEn4AAefWKhMPqn/O/XtyKKjIdvP7PBEVzctscyYs7i/Y35zYSENos1akohrgGFp4hd4gYONa+k+i5SdAA==
   dependencies:
-    "@snowplow/tracker-core" "3.12.0"
+    "@snowplow/browser-tracker-core" "3.14.0"
+    "@snowplow/tracker-core" "3.14.0"
+    tslib "^2.3.1"
+
+"@snowplow/browser-tracker-core@3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker-core/-/browser-tracker-core-3.14.0.tgz#91567fb22ac7f6b3df1bfe2db6c840f6aec5719b"
+  integrity sha512-/qYnDYrZNAh2w6GEhdUhQHZU5sz1bqW5rpFW6UGf7g65aDIJOqyw3zDK1xubo5TnAHSk4VRDrUN+WVUo3mF15Q==
+  dependencies:
+    "@snowplow/tracker-core" "3.14.0"
     sha1 "^1.1.1"
     tslib "^2.3.1"
     uuid "^3.4.0"
 
-"@snowplow/browser-tracker@^3.12.0":
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker/-/browser-tracker-3.12.0.tgz#861c091d78e18ca4b08243db108181df90f955e6"
-  integrity sha512-CKEAebAZR6TFFEmwOkTdk7Qv4U0liBb6uGPi3ET5+jbmHyAmCOsjlD39vFFUxfV4ySTLtzEUXQHL2FLQbAsiYg==
+"@snowplow/browser-tracker@^3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker/-/browser-tracker-3.14.0.tgz#88e6954de0a351ea517b7c38337fdcedb790b868"
+  integrity sha512-Ho5Q40o7N1wPSWUOut24DRbAPo+hOww8kXK1e6qjyFo2HbaAWK9FKZv35JpP8Nkgj+215Zyhe0fhEfmkgk6wow==
   dependencies:
-    "@snowplow/browser-tracker-core" "3.12.0"
-    "@snowplow/tracker-core" "3.12.0"
+    "@snowplow/browser-tracker-core" "3.14.0"
+    "@snowplow/tracker-core" "3.14.0"
     tslib "^2.3.1"
 
-"@snowplow/tracker-core@3.12.0":
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/tracker-core/-/tracker-core-3.12.0.tgz#31b67dd91a7373aba837ab41317c025f01181249"
-  integrity sha512-AzEW0oJeCIA1AVHu1dllkkQPdYMasCFHT5O50V92TnB936B56KJ8XxOHzw1FOU9S1s76M93truUvHpvMZPOlGw==
+"@snowplow/tracker-core@3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/tracker-core/-/tracker-core-3.14.0.tgz#c5d38bd52066977973656150ae14d14417d21270"
+  integrity sha512-YRbYJLlkcVVTCOcFSrimXCAdj+NxP/Dw6kdptaDyLFRC4S+SNfnar/BGEGj4Bx5e4aAZPME3nLeRfj9EfJBZhA==
   dependencies:
     tslib "^2.3.1"
     uuid "^3.4.0"
@@ -2167,6 +2178,22 @@
   dependencies:
     "@typescript-eslint/types" "5.24.0"
     eslint-visitor-keys "^3.3.0"
+
+"@vimeo/player@2.16.4":
+  version "2.16.4"
+  resolved "https://registry.yarnpkg.com/@vimeo/player/-/player-2.16.4.tgz#40043a55f440b94753461da44dfe94bae077133e"
+  integrity sha512-i+ids9ziQuai3mp8XzF9Q5b2hLgRCekRcefdnoy+RkKUR8Xq0cJndnk9jHugEOw8v6PLj7tO3eEAw4lu2/AG2Q==
+  dependencies:
+    native-promise-only "0.8.1"
+    weakmap-polyfill "2.0.4"
+
+"@vimeo/player@^2.19.0":
+  version "2.20.1"
+  resolved "https://registry.yarnpkg.com/@vimeo/player/-/player-2.20.1.tgz#b2db8651cfed71009475528019977bf8e8c3dadf"
+  integrity sha512-eoKkqsMY33RQn8lFtlUbb3uo+xDL3V8PTN01SdrJ1E9PI+5pLyqNGh/GO/2EyX9Vr6antLm0/v36ABF2rcwXIQ==
+  dependencies:
+    native-promise-only "0.8.1"
+    weakmap-polyfill "2.0.4"
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
@@ -5606,6 +5633,11 @@ jest@^27.4.3:
     import-local "^3.0.2"
     jest-cli "^27.5.1"
 
+js-base64@^3.7.5:
+  version "3.7.5"
+  resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-3.7.5.tgz#21e24cf6b886f76d6f5f165bfcd69cc55b9e3fca"
+  integrity sha512-3MEt5DTINKqfScXKfJFrRbxkrnk2AxPWGBL/ycjz4dK8iqiSJ06UxD8jh8xuh6p10TX4t2+7FsBYVxxQbMg+qA==
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -6061,6 +6093,11 @@ nanoid@^3.3.3:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.4.tgz#730b67e3cd09e2deacf03c027c81c9d9dbc5e8ab"
   integrity sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==
+
+native-promise-only@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/native-promise-only/-/native-promise-only-0.8.1.tgz#20a318c30cb45f71fe7adfbf7b21c99c1472ef11"
+  integrity sha512-zkVhZUA3y8mbz652WrL5x0fB0ehrBkulWT3TomAQ9iDtyXZvzKeEA6GPxAItBYeNYl5yngKRX612qHOhvMkDeg==
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -8497,6 +8534,11 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   integrity sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
   dependencies:
     minimalistic-assert "^1.0.0"
+
+weakmap-polyfill@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/weakmap-polyfill/-/weakmap-polyfill-2.0.4.tgz#bcc301e4c8eb4eda3e406f08f1a691093e407884"
+  integrity sha512-ZzxBf288iALJseijWelmECm/1x7ZwQn3sMYIkDr2VvZp7r6SEKuT8D0O9Wiq6L9Nl5mazrOMcmiZE/2NCenaxw==
 
 web-vitals@^2.1.4:
   version "2.1.4"
