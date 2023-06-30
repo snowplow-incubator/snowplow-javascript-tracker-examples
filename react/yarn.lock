@@ -1543,47 +1543,57 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snowplow/browser-plugin-form-tracking@^3.9.0":
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-form-tracking/-/browser-plugin-form-tracking-3.9.0.tgz#926109e34824238555fce80288cd28bb6f38688b"
-  integrity sha512-VLtMR7xBQNhktl2NaRV8OWcFCbhdn9ZsrFlnKEFdTISzmfHGRxDIlQE88opwI480VFBcDpTx8d80mcyxFiG2oA==
+"@snowplow/browser-plugin-form-tracking@^3.12.0":
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-form-tracking/-/browser-plugin-form-tracking-3.12.0.tgz#1a3c4a40fb4e92d2c23a8417a1aa66abbf5731cd"
+  integrity sha512-38L29wi7X4+jMD6zu7ajbpnPxUgXvc0AddfBq5Jv0R0MwIIOhAh6kDZe4NM+EWMNsphoWt8zHX2hb6QyM3Sozw==
   dependencies:
-    "@snowplow/browser-tracker-core" "3.9.0"
-    "@snowplow/tracker-core" "3.9.0"
+    "@snowplow/browser-tracker-core" "3.12.0"
+    "@snowplow/tracker-core" "3.12.0"
     tslib "^2.3.1"
 
-"@snowplow/browser-plugin-youtube-tracking@^3.9.0":
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-youtube-tracking/-/browser-plugin-youtube-tracking-3.9.0.tgz#b27032d5819a1bac08691bfcf78e0612e2611bda"
-  integrity sha512-UKlQOyjck7ZYhzw+gd6qGUMwcnttcPcGlwoZp6kZY/7HJD1jOPO8aIVp6b9rhCzSpFlX8Jh0U3eiWMGbaJ/tbw==
+"@snowplow/browser-plugin-media@^3.12.0":
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-media/-/browser-plugin-media-3.12.0.tgz#82ab638a538c360730fe755cf6f4a905417f6b7b"
+  integrity sha512-QkcrteIcOhLRPqqX8MFMysEgvX1GEN9eWkoU2K4cL6zWuTnPe+H91Dc6ABbR8EohJB0nvOqA8cLHM4mXeSXxUA==
   dependencies:
-    "@snowplow/browser-tracker-core" "3.9.0"
-    "@snowplow/tracker-core" "3.9.0"
+    "@snowplow/browser-tracker-core" "3.12.0"
+    "@snowplow/tracker-core" "3.12.0"
+    tslib "^2.3.1"
+    uuid "^3.4.0"
+
+"@snowplow/browser-plugin-youtube-tracking@^3.12.0":
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-plugin-youtube-tracking/-/browser-plugin-youtube-tracking-3.12.0.tgz#e1bfef712d6cbae74f73d7cc6daf5448d99fccb2"
+  integrity sha512-G2IPIA/fF5T+RxzEsJZEALYbzfzSyeNTFHVuPVO69l4irEGGDeVqMMx9Na6TT2ZzN6y0yKVjBWo02iUz9SnYpA==
+  dependencies:
+    "@snowplow/browser-tracker-core" "3.12.0"
+    "@snowplow/tracker-core" "3.12.0"
     tslib "^2.3.1"
 
-"@snowplow/browser-tracker-core@3.9.0":
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker-core/-/browser-tracker-core-3.9.0.tgz#7489cfedc334506cbea24891de07b4880897e372"
-  integrity sha512-jLije/t8Ce4g85bFLDOyjF8GJ5n1DdP0pAoe8X0I4y3ke2jcegvNmM/xPQeePKFN7Pp30+6NZWUPzsC01DjyWw==
+"@snowplow/browser-tracker-core@3.12.0":
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker-core/-/browser-tracker-core-3.12.0.tgz#eb9bce60c6ecd2c51530fda1c893f75a09048e3b"
+  integrity sha512-niMi23izU6irxeld9RL4LkFGwDRQ79vpV3cBcN8ip7X43/a7FS7PVmyP5r8Er1jhaYvMWah3bs8ltURJrvbSGw==
   dependencies:
-    "@snowplow/tracker-core" "3.9.0"
+    "@snowplow/tracker-core" "3.12.0"
     sha1 "^1.1.1"
     tslib "^2.3.1"
     uuid "^3.4.0"
 
-"@snowplow/browser-tracker@^3.9.0":
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker/-/browser-tracker-3.9.0.tgz#4ce6015cd83b3fe7c0d9993f3d0b994b3b47781e"
-  integrity sha512-rP+/duNSRg26rrgmDWRECzPR4sMfo9N4OQnYb3mphAgPtuOdcKU3E41Aj3qN+fzfa/DSjFZEQmSqD6xN55VR8A==
+"@snowplow/browser-tracker@^3.12.0":
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/browser-tracker/-/browser-tracker-3.12.0.tgz#861c091d78e18ca4b08243db108181df90f955e6"
+  integrity sha512-CKEAebAZR6TFFEmwOkTdk7Qv4U0liBb6uGPi3ET5+jbmHyAmCOsjlD39vFFUxfV4ySTLtzEUXQHL2FLQbAsiYg==
   dependencies:
-    "@snowplow/browser-tracker-core" "3.9.0"
-    "@snowplow/tracker-core" "3.9.0"
+    "@snowplow/browser-tracker-core" "3.12.0"
+    "@snowplow/tracker-core" "3.12.0"
     tslib "^2.3.1"
 
-"@snowplow/tracker-core@3.9.0":
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/@snowplow/tracker-core/-/tracker-core-3.9.0.tgz#f59e3ab90003abb77b592e9e554be9ab9e121857"
-  integrity sha512-6JcroVk5r2i3r4QQPQ1zd7zhixP6/fSupkjV0AeSNvLbbVv/k4UxeoM2m57zJdsaBaGZDEKJqgmYTRkHJUGFKg==
+"@snowplow/tracker-core@3.12.0":
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@snowplow/tracker-core/-/tracker-core-3.12.0.tgz#31b67dd91a7373aba837ab41317c025f01181249"
+  integrity sha512-AzEW0oJeCIA1AVHu1dllkkQPdYMasCFHT5O50V92TnB936B56KJ8XxOHzw1FOU9S1s76M93truUvHpvMZPOlGw==
   dependencies:
     tslib "^2.3.1"
     uuid "^3.4.0"

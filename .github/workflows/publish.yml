@@ -27,7 +27,7 @@ jobs:
           sed -i 's/src="\//src="\/snowplow-javascript-tracker-examples\//g' build/index.html
 
           # create a new directory and index.html for each route in the app
-          for path in form snowplow iframe_form youtube youtube_player; do
+          for path in form snowplow iframe_form youtube youtube_player media; do
             mkdir build/${path}
             cp build/index.html build/${path}/index.html
           done
