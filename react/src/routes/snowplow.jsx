@@ -1,7 +1,8 @@
 import { useLocationChange } from '../tracker';
 import { Link } from "react-router-dom";
+import CreateTrackerWrapper from "../createTrackerWrapper";
 
-export default function Snowplow() {
+function Snowplow() {
   useLocationChange();
   return (
     <div className="App">
@@ -15,3 +16,13 @@ export default function Snowplow() {
     </div>
   );
 }
+
+function Wrapped() {
+  return (
+    <CreateTrackerWrapper>
+      <Snowplow />
+    </CreateTrackerWrapper>
+  );
+}
+
+export default Wrapped;

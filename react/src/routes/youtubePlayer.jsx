@@ -1,5 +1,6 @@
 import { enableYouTubeTracking } from "@snowplow/browser-plugin-youtube-tracking";
 import React, { useEffect } from "react";
+import CreateTrackerWrapper from "../createTrackerWrapper";
 
 function loadVideoAndTrack(elemId, videoId) {
   new window.YT.Player(elemId, {
@@ -26,7 +27,7 @@ function loadYouTubeIframeAPI(elemId, videoId) {
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 }
 
-export default function YoutubeTrack() {
+function YoutubeTrack() {
   const elemId = "youtube";
   const videoId = "zSM4ZyVe8xs";
 
@@ -40,3 +41,13 @@ export default function YoutubeTrack() {
 
   return <div id={elemId}></div>;
 }
+
+function Wrapped() {
+  return (
+    <CreateTrackerWrapper>
+      <YoutubeTrack />
+    </CreateTrackerWrapper>
+  );
+}
+
+export default Wrapped;

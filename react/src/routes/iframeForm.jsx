@@ -2,8 +2,10 @@ import { useLocationChange } from '../tracker';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { enableFormTracking } from '@snowplow/browser-plugin-form-tracking';
+import CreateTrackerWrapper from "../createTrackerWrapper";
+import { getPath } from '../helpers';
 
-export default function IframeForm() {
+function IframeForm() {
     useLocationChange();
 
     useEffect(() => {
@@ -28,10 +30,20 @@ export default function IframeForm() {
             <h1>Form tracking demo</h1>
 
             <p>
-                <Link to="/">Go back</Link>
+                <Link to={getPath("")}>Go back</Link>
             </p>
 
             <iframe id="form_iframe" title="form_iframe" style={{width: 500, height: 500}}></iframe>
         </div>
     );
 }
+
+function Wrapped() {
+  return (
+    <CreateTrackerWrapper>
+      <IframeForm />
+    </CreateTrackerWrapper>
+  );
+}
+
+export default Wrapped;

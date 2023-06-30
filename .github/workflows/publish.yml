@@ -1,0 +1,38 @@
+name: publish
+
+on:
+  push:
+   branches:
+     - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+      - run: |
+      - run: |
+          cd react
+          yarn install
+          yarn build
+
+          # replace the base href to account for the /snowplow-javascript-tracker-examples/ path
+          sed -i 's/href="\//href="\/snowplow-javascript-tracker-examples\//g' build/index.html
+          sed -i 's/src="\//src="\/snowplow-javascript-tracker-examples\//g' build/index.html
+
+          # create a new directory and index.html for each route in the app
+          for path in form snowplow iframe_form youtube youtube_player; do
+            mkdir build/${path}
+            cp build/index.html build/${path}/index.html
+          done
+
+          # commit to gh-pages branch and push
+          git --work-tree build add --all
+          git commit -m "Automatic Deploy action run by github-actions"
+          git push origin HEAD:gh-pages --force
