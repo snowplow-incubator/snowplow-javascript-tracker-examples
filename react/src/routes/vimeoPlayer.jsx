@@ -13,7 +13,7 @@ function VimeoPlayer() {
     const player = new Player(vimeoPlayer.current);
     const id = uuidv4();
 
-    player.addCuePoint(2.5, { helloMatus: "bar" });
+    player.addCuePoint(2.5, { foo: "bar" });
 
     startVimeoTracking({
       video: player,
