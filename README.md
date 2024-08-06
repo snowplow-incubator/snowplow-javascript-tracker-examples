@@ -4,3 +4,4 @@
 
 - [Angular](angular/ngSnowplow)
 - [React](react)
+- [Next.js](nextjs)
