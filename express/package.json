@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@snowplow/node-tracker": "^3.5.0",
+    "@snowplow/node-tracker": "4.0.0-beta.2",
     "dotenv": "^16.0.2",
     "express": "^4.18.1"
   },

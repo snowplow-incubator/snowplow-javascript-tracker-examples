@@ -1,21 +1,22 @@
-import { tracker, gotEmitter, HttpProtocol, HttpMethod } from "@snowplow/node-tracker";
+import { newTracker } from "@snowplow/node-tracker";
 
-const emitter = gotEmitter(
-  "0.0.0.0",
-  HttpProtocol.HTTPS,
-  9090,
-  HttpMethod.POST,
-  1, // buffer size – 1 means that each event is sent right away, without buffering
-  5,
-  undefined,
-  function (error, response) {
-    // Callback called for each request
-    if (error) {
-      console.log(error, "Request error");
-    } else {
-      console.log("Event Sent");
-    }
+export const expressTracker = newTracker(
+  {
+    namespace: "myTracker",
+    appId: "myApp",
+    encodeBase64: false,
+  },
+  {
+    customEmitter: () => ({
+      input: (payload) => {
+        return Promise.resolve();
+      },
+      flush: () => {
+        return Promise.resolve();
+      },
+      setCollectorUrl: (url) => {},
+      setAnonymousTracking: (anonymous) => {},
+      setBufferSize: (bufferSize) => {},
+    }),
   }
 );
-
-export const expressTracker = tracker(emitter, "myTracker", "myApp", false);

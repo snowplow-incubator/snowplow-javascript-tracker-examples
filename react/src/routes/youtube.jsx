@@ -1,4 +1,4 @@
-import { enableYouTubeTracking } from "@snowplow/browser-plugin-youtube-tracking";
+import { startYouTubeTracking } from "@snowplow/browser-plugin-youtube-tracking";
 import React, { useEffect } from "react";
 import CreateTrackerWrapper from "../createTrackerWrapper";
 
@@ -6,10 +6,12 @@ function YoutubeTrack() {
   const videoId = "youtube";
 
   useEffect(() => {
-    enableYouTubeTracking({
-      id: videoId,
-      options: {
-        captureEvents: ["DefaultEvents", "error"],
+    startYouTubeTracking({
+      id: "youtube",
+      captureEvents: ["DefaultEvents", "error", "ping"],
+      video: videoId,
+      pings: {
+        pingInterval: 5,
       },
     });
   }, []);

@@ -24,7 +24,7 @@ function handleDisableAnonymousTracking() {
 function handleTrackStructuredEvent() {
   trackStructEvent({
     category: "category",
-    action: "action"
+    action: "action",
   });
 }
 

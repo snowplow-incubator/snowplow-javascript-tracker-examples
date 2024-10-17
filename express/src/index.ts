@@ -24,20 +24,24 @@ app.get("/", (req: Request, res: Response) => {
 app.get("/order/complete/:transactionId", (req: Request, res: Response) => {
   const { transactionId } = req.params;
 
-  const { eid: adConversionEid } = expressTracker.track(
+  const adConversionPayload = expressTracker.track(
     buildAdConversion({
       campaignId: "Transactional",
       conversionId: transactionId,
     })
   );
 
-  const { eid: ecomTransactionEid } = expressTracker.track(
+  const adConversionEid = adConversionPayload ? adConversionPayload.eid : "undefined";
+
+  const ecomTransactionPayload = expressTracker.track(
     buildEcommerceTransaction({
       orderId: transactionId,
       total: 10,
       affiliation: "test store",
     })
   );
+
+  const ecomTransactionEid = ecomTransactionPayload ? ecomTransactionPayload.eid : "undefined";
 
   res.send(
     `Transaction ${transactionId} successful! Conversion Event Id: ${adConversionEid}. Transaction Event Id: ${ecomTransactionEid}`
