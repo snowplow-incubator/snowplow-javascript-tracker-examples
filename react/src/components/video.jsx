@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import * as plugin from "@snowplow/browser-plugin-media";
 import "./video.css";
 import { refreshAds, skipAd } from "./adHelpers";
+import { v4 as uuid } from 'uuid';
 
-let id = "video-1";
+let id; // unique for each video playback (each startMediaTracking call)
 
 function Video() {
   let getPlayingAdStage;
@@ -11,6 +12,7 @@ function Video() {
 
   useEffect(() => {
     console.log("start media tracking");
+    id = uuid();
     plugin.startMediaTracking({
       id,
       player: getPlayer(),
