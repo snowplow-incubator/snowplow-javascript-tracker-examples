@@ -17,7 +17,8 @@
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
     "@react-navigation/native": "^6.0.2",
-    "@snowplow/react-native-tracker": "4.0.2-dev.1",
+    "@snowplow/react-native-tracker": "4.1.1-dev.1",
+    "@snowplow/browser-plugin-snowplow-ecommerce": "4.1.1-dev.1",
     "expo": "~51.0.28",
     "expo-constants": "~16.0.2",
     "expo-font": "~12.0.9",

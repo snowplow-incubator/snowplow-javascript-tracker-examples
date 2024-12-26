@@ -1,10 +1,17 @@
-import { Button, Text, View } from "react-native";
-import { trackPageView, trackStructEvent } from "./tracking";
+import { Button, NativeModules, Platform, Text, View } from "react-native";
+import {
+  trackPageView,
+  trackScreenView,
+  trackScrollChanged,
+  trackStructEvent,
+  trackProductViewEvent,
+  trackTransactionEvent,
+} from "./tracking";
 import { useEffect } from "react";
 
 export default function Index() {
   useEffect(() => {
-    trackPageView();
+    trackScreenView("Home");
   });
 
   return (
@@ -15,12 +22,31 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>
-        <Button
-          onPress={trackStructEvent}
-          title="Track a structured event"
-        ></Button>
+      <Text style={{ fontWeight: "bold", fontSize: 20 }}>Basic Events</Text>
+      <Button
+        onPress={trackStructEvent}
+        title="Track a structured event"
+      ></Button>
+      <Button onPress={trackPageView} title="Track a page view event"></Button>
+      <Button
+        onPress={() => trackScreenView("Other")}
+        title="Track a screen view event"
+      ></Button>
+      <Button
+        onPress={() => trackScrollChanged()}
+        title="Track a scroll changed event"
+      ></Button>
+      <Text style={{ fontWeight: "bold", fontSize: 20 }}>
+        E-commerce Events
       </Text>
+      <Button
+        onPress={() => trackProductViewEvent()}
+        title="Track a product view"
+      ></Button>
+      <Button
+        onPress={() => trackTransactionEvent()}
+        title="Track a transaction"
+      ></Button>
     </View>
   );
 }
