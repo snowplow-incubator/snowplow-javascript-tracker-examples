@@ -8,6 +8,11 @@ import {
   trackTransactionEvent,
 } from "./tracking";
 import { useEffect } from "react";
+import { WebView } from "react-native-webview";
+import { getWebViewCallback } from "@snowplow/react-native-tracker";
+import { Dimensions } from "react-native";
+
+const webViewEndpoint = "http://localhost:3000/";
 
 export default function Index() {
   useEffect(() => {
@@ -47,6 +52,16 @@ export default function Index() {
         onPress={() => trackTransactionEvent()}
         title="Track a transaction"
       ></Button>
+
+      {webViewEndpoint ? (
+        <WebView
+          onMessage={getWebViewCallback()}
+          source={{ uri: webViewEndpoint }}
+          style={{
+            width: Dimensions.get("window").width,
+          }}
+        />
+      ) : null}
     </View>
   );
 }
