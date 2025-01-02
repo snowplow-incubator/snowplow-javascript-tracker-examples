@@ -12,7 +12,7 @@ import { WebView } from "react-native-webview";
 import { getWebViewCallback } from "@snowplow/react-native-tracker";
 import { Dimensions } from "react-native";
 
-const webViewEndpoint = "http://localhost:3000/";
+const webViewEndpoint = "";
 
 export default function Index() {
   useEffect(() => {
