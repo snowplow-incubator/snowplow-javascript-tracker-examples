@@ -1,4 +1,4 @@
-import { Button, NativeModules, Platform, Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
 import {
   trackPageView,
   trackScreenView,

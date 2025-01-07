@@ -1,4 +1,4 @@
-import { newTracker, PlatformContextProperty, ReactNativeTracker } from "@snowplow/react-native-tracker";
+import { newTracker, ReactNativeTracker } from "@snowplow/react-native-tracker";
 import { SnowplowEcommercePlugin, trackProductView, trackTransaction } from "@snowplow/browser-plugin-snowplow-ecommerce";
 
 let tracker: ReactNativeTracker | undefined;
